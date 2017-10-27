@@ -7,41 +7,43 @@ var path = require("path");
 
 var mysql = require("mysql");
 // connect strings for mysql
-var connection = mysql.createConnection({
-	host: "127.0.0.1",
-	user: "root",
-	password: "root",
-	database: "dbms"
-});
+// var connection = mysql.createConnection({
+// 	host: "127.0.0.1",
+// 	user: "root",
+// 	password: "root",
+// 	database: "dbms"
+// });
 
-var session = require('express-session');
-var MySQLStore = require('express-mysql-session')(session);
+// var session = require('express-session');
+// var MySQLStore = require('express-mysql-session')(session);
 
-var options = {
-    host: '127.0.0.1',
-    port: 3306,
-    user: 'root',
-    password: 'root',
-    database: 'dbms'
-};
+// var options = {
+//     host: '127.0.0.1',
+//     port: 3306,
+//     user: 'root',
+//     password: 'root',
+//     database: 'dbms'
+// };
 
-var sessionStore = new MySQLStore(options);
- 
-app.use(session({
-    key: 'session_cookie_name',
-    secret: 'session_cookie_secret',
-    store: sessionStore,
-    resave: false,
-    saveUninitialized: false
-}));
+// var sessionStore = new MySQLStore(options);
+//  
+// app.use(session({
+//     key: 'session_cookie_name',
+//     secret: 'session_cookie_secret',
+//     store: sessionStore,
+//     resave: false,
+//     saveUninitialized: false
+// }));
 
-// connecting ......
-connection.connect();
+// // connecting ......
+// connection.connect();
 
-app.use(session({secret: "secret"}));
+// app.use(session({secret: "secret"}));
 
 app.use(bodyParser.text());
 app.use(express.static('templates'));
+
+var connection = 0;
 
 //app.set('views', __dirname + '/views')
 
