@@ -68,9 +68,9 @@ app.set('view engine', 'handlebars');
 
 
 app.get('/', function(req, res) {
-    if (req.session.username) {
-        res.redirect('/dashboard');
-    }
+    // if (req.session.username) {
+    //     res.redirect('/dashboard');
+    // }
 
     res.sendFile('home.html', { root: path.join(__dirname, 'templates')});
 });
