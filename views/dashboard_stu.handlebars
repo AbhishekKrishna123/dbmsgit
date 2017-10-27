@@ -1,0 +1,233 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Dashboard</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="./materialize/css/materialize.min.css">
+    </head>
+    <body>
+
+        <nav class="indigo darken-3">
+            <div class="nav-wrapper container">
+                <a href="#" class="brand-logo center">Placement System</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="">Logged in as {{Details.USN}}</a></li>
+                </ul>
+            </div>
+        </nav>
+        <section class="container">
+            <h1>Dashboard</h1>
+            <h3>Welcome {{Details.FirstName}}!</h3>
+        </section>
+
+    <section class="container" style="margin-top: 5em">
+        <h4 class="blue-text">Here are your details</h4>
+        <br>
+        <table class="bordered highlight ">
+            <thead>
+                <tr>
+                    <th>
+                        Field
+                    </th>
+                    <th>
+                        Value
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        First Name
+                    </td>
+                    <td>
+                        {{Details.FirstName}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Last Name
+                    </td>
+                    <td>
+                        {{Details.LastName}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        USN
+                    </td>
+                    <td>
+                        {{Details.USN}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Email ID
+                    </td>
+                    <td>
+                        {{Details.EmailID}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Mobile Number
+                    </td>
+                    <td>
+                        {{Details.MobileNumber}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Address
+                    </td>
+                    <td>
+                        {{Details.Address}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Gender
+                    </td>
+                    <td>
+                        {{Details.Gender}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Section
+                    </td>
+                    <td>
+                        {{Details.Section}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Student Type
+                    </td>
+                    <td>
+                        {{Details.StudentType}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Diploma
+                    </td>
+                    <td>
+                        {{Details.DiplomaStudent}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Semester
+                    </td>
+                    <td>
+                        {{Details.Semester}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        CGPA
+                    </td>
+                    <td>
+                        {{Details.CGPA}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="center">
+            <br><br>
+            <a class="waves-effect waves-light btn blue" href="/logout"> Logout </a>
+        </div>
+
+        <div class="center">
+            <br><br>
+            <a class="waves-effect waves-light btn blue" href="/password_change"> Change Password </a>
+        </div>
+
+
+    </section>
+
+    <section class="container" style="margin-top: 5em">
+
+        <h3> Upcoming Tests </h3>
+
+        {{!-- <ul>
+            {{#each Tests}}
+                <li> {{this.Name}} </li>
+            {{/each}}
+        </ul> --}}
+        <table class="bordered highlight ">
+            <thead>
+                <tr>
+                    <th>
+                        Company Name
+                    </th>
+                    <th>
+                        Test Date
+                    </th>
+                    <th>
+                        Test Time
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each Tests}}
+                    <tr>
+                        <td> {{this.Name}} </td>
+                        <td> {{this.TestDate}} </td>
+                        <td> {{this.TestTime}} </td>
+                        <td> <button class="waves-effect waves-light btn blue" onclick = "reg(this)" name = {{this.TestID}}> Register </button> </td>
+                    </tr>
+                {{/each}}
+
+            </tbody>
+        </table>
+    </section>
+
+    <br><br>
+
+        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <script>
+
+            function reg(obj)
+            {
+                console.log("Function called");
+                var testID = obj.name;
+                $.ajax({
+                    url: '/testregister',
+                    type: "POST",
+                    datatype: "json",
+                    data: {ID: testID},
+
+                    success: function(data)
+                    {
+                        console.log("DATA SENT\n" + data);
+
+                    },
+
+                    error: function(jqXHR, textstatus, err)
+                    {
+                        console.log("ERROR");
+                    }
+
+                });
+            }
+        </script>
+
+
+    </body>
+</html>

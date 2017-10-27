@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title> Add Test </title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+		<div id="page-wrapper">
+
+			<!-- Header -->
+
+
+			<!-- Main -->
+				<section id="main" class="container 75%">
+					<header>
+						<h2> Add Company Test </h2>
+						<p> RVCE Placement Management System </p>
+					</header>
+					<div class="box">
+						<form method="post" action="/add_company_test">
+
+
+							
+
+							<div class="row uniform 50%">
+								<div class="6u 12u(mobilep)">
+									<select name="companyname">
+										<option value = ""> Select Company </option>
+										{{#each Companies}}
+										<!--<option value="">Gender</option>
+										<option value="Male">Male</option>
+										<option value="Female">Female</option>
+										<option value="Other">Other</option>
+										-->
+											<option value = {{this}}> {{this}} </option>
+										{{/each}}
+									</select>
+								</div>
+								<div class="6u 12u(mobilep)">
+                                        <input type="date" name="testdate" id="testdate" value="" required = "" placeholder="Test Date" />
+                                </div>
+							</div>
+
+							<div class="row uniform 50%">
+								<div class="6u 12u(mobilep)">
+                                        <input type="time" name="testtime" id="testtime" value="" required = "" placeholder="Test Time" />
+                                </div>
+								<div class="6u 12u(mobilep)">
+									<input type="text" name="testlocation" id="testlocation" value="" required = "" placeholder="Test Location" />
+								</div>
+							</div>
+
+							<div class="row uniform">
+								<div class="12u">
+                                        <input type="text" name="testname" id="testname" value="" required = "" placeholder="Test Name" />
+                                </div>
+							</div>
+
+
+
+							<div class="row uniform 50%">
+								<div class="6u 12u(mobilep)">
+									<input type="text" name="cutoffgpa" id="cutoffgpa" value="" placeholder="GPA Cutoff" data-validation="number" data-validation-allowing="range[0;10], float" />
+								</div>
+
+								<div class="6u 12u(mobilep)">
+									<input type="text" name="otherdetails" id="otherdetails" value="" placeholder="Other Details / Remarks"/>
+								</div>
+							</div>
+
+
+							<div class="row uniform">
+								<div class="12u">
+									<ul class="actions align-center">
+										<li><input type="submit" value="Register" /></li>
+									</ul>
+								</div>
+							</div>
+						</form>
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<!-- <footer id="footer">
+
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</footer> -->
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollgress.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+			<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
+			<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+
+
+			<script>
+				$.validate({
+				modules : 'security'
+				});
+			</script>
+
+	</body>
+</html>

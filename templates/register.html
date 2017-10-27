@@ -1,0 +1,209 @@
+<!DOCTYPE HTML>
+<!--
+	Alpha by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title> Register </title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+		<div id="page-wrapper">
+
+			<!-- Header -->
+
+
+			<!-- Main -->
+				<section id="main" class="container 75%">
+					<header>
+						<h2>Student Registration Form </h2>
+						<p> RVCE Placement Management System </p>
+					</header>
+					<div class="box">
+						<form method="post" action="/register">
+
+
+							<div class="row uniform 50%">
+								<div class="6u 12u(mobilep)">
+									<input type="text" name="fname" id="fname" value="" required = "" placeholder="First Name" />
+								</div>
+								<div class="6u 12u(mobilep)">
+									<input type="text" name="lname" id="lname" value="" required = "" placeholder="Last Name" />
+								</div>
+                            </div>
+
+
+							<div class="row uniform 50%">
+                                    <div class="6u 12u(mobilep)">
+                                        <input type="text" name="usn" id="usn" value="" required = "" placeholder="USN" data-validation="length" data-validation-length="10-10" />
+                                    </div>
+                                    <div class="6u 12u(mobilep)">
+                                        <input type="date" name="dob" id="dob" value="" required = "" placeholder="Date of Birth" />
+                                    </div>
+							</div>
+
+							<div class="row uniform 50%">
+									<div class="12u">
+										<input type="text" name="mobile" id="mobile" value="" required = "" placeholder="Mobile number" data-validation="number" data-validation-length="10"/>
+									</div>
+							</div>
+
+							<div class="row uniform 50%">
+									<div class="12u">
+										<input type="text" name="email" id="email" value="" required = "" placeholder="Email ID" data-validation="email" />
+									</div>
+							</div>
+
+							<div class="row uniform 50%">
+								<div class="12u">
+									<input type="text" name="address" id="address" value="" required = "" placeholder="Address" />
+								</div>
+							</div>
+
+							<div class="row uniform 50%">
+								<div class="6u 12u(mobilep)">
+									<select name="gender">
+										<option value="">Gender</option>
+										<option value="Male">Male</option>
+										<option value="Female">Female</option>
+										<option value="Other">Other</option>
+									</select>
+								</div>
+								<div class="6u 12u(mobilep)">
+									<select name="section">
+										<option value="">Section</option>
+										<option value="A">A</option>
+										<option value="B">B</option>
+										<option value="C">C</option>
+										<option value="D">D</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="row uniform 50%">
+								<div class="6u 12u(mobilep)">
+									<select name="ugpg">
+										<option value="">UG/PG</option>
+										<option value="UG">UG</option>
+										<option value="PG">PG</option>
+									</select>
+								</div>
+								<div class="6u 12u(mobilep)">
+									<select name="diploma">
+										<option value="">Diploma</option>
+										<option value="Yes">Yes</option>
+										<option value="No">No</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="row uniform 50%">
+								<div class="6u 12u(mobilep)">
+									<!-- <input type="text" name="semester" id="semester" value="" required = "" placeholder="Semester" /> -->
+									<select name="semester" required="">
+										<option value="">Semester</option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="7">7</option>
+										<option value="8">8</option>
+									</select>
+								</div>
+								<div class="6u 12u(mobilep)">
+									<input type="text" name="cgpa" id="cgpa" value="" required = "" placeholder="CGPA" data-validation="number" data-validation-allowing="range[0;10]" />
+								</div>
+							</div>
+
+							<div class="row uniform 50%">
+								<div class="6u 12u(mobilep)">
+									<input type="text" name="sgpa1" id="sgpa1" value="" placeholder="SGPA1" data-validation="number" data-validation-allowing="range[0;10], float" />
+								</div>
+								<div class="6u 12u(mobilep)">
+									<input type="text" name="sgpa2" id="sgpa2" value="" placeholder="SGPA2" data-validation="number" data-validation-allowing="range[0;10], float" />
+								</div>
+								<div class="6u 12u(mobilep)">
+									<input type="text" name="sgpa3" id="sgpa3" value="" placeholder="SGPA3" data-validation="number" data-validation-allowing="range[0;10], float" />
+								</div>
+								<div class="6u 12u(mobilep)">
+									<input type="text" name="sgpa4" id="sgpa4" value="" placeholder="SGPA4" data-validation="number" data-validation-allowing="range[0;10], float" />
+								</div>
+								<div class="6u 12u(mobilep)">
+									<input type="text" name="sgpa5" id="sgpa5" value="" placeholder="SGPA5" data-validation="number" data-validation-allowing="range[0;10], float" />
+								</div>
+								<div class="6u 12u(mobilep)">
+									<input type="text" name="sgpa6" id="sgpa6" value="" placeholder="SGPA6" data-validation="number" data-validation-allowing="range[0;10], float" />
+								</div>
+								<div class="6u 12u(mobilep)">
+									<input type="text" name="sgpa7" id="sgpa7" value="" placeholder="SGPA7" data-validation="number" data-validation-allowing="range[0;10], float" />
+								</div>
+								<div class="6u 12u(mobilep)">
+									<input type="text" name="sgpa8" id="sgpa8" value="" placeholder="SGPA8" data-validation="number" data-validation-allowing="range[0;10], float" />
+								</div>
+							</div>
+
+							<div class="row uniform 50%">
+								<div class="6u 12u(mobilep)">
+									<input type="text" name="10th" id="marks10th" value="" placeholder="10th Marks" data-validation="number" data-validation-allowing="range[0;100]" />
+								</div>
+								<div class="6u 12u(mobilep)">
+									<input type="text" name="12th" id="marks12th" value="" placeholder="12th Marks" data-validation="number" data-validation-allowing="range[0;100]" />
+								</div>
+							</div>
+
+                            <div class = "row uniform 50%">
+                                <div class = "12u">
+                                    <input type = "password" name = "pwd" id = "password" value = "" required = "" placeholder = "Password" data-validation="strength" data-validation-strength="1" />
+                                </div>
+                            </div>
+
+							<div class="row uniform">
+								<div class="12u">
+									<ul class="actions align-center">
+										<li><input type="submit" value="Register" /></li>
+									</ul>
+								</div>
+							</div>
+						</form>
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<!-- <footer id="footer">
+
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</footer> -->
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollgress.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+			<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
+			<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+
+
+			<script>
+				$.validate({
+				modules : 'security'
+				});
+			</script>
+
+	</body>
+</html>
